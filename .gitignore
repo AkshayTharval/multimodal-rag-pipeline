@@ -1,0 +1,57 @@
+# Virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ChromaDB data (created at runtime)
+chroma_db/
+
+# Semantic cache
+cache.db
+*.db
+
+# Downloaded demo data (too large for git) — keep dir structure, ignore content
+data/texts/*
+data/images/*
+data/videos/*
+!data/**/.gitkeep
+
+# Model cache (HuggingFace)
+.cache/
+~/.cache/huggingface/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
