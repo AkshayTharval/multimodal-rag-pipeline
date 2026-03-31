@@ -2,6 +2,24 @@
 
 A production-grade Retrieval Augmented Generation system that handles text, images, and video keyframes in a unified pipeline. Query any content type with natural language and get grounded answers with full retrieval provenance.
 
+## Interactive Demo
+
+**[`demo/pipeline_walkthrough.ipynb`](demo/pipeline_walkthrough.ipynb)** — a step-by-step notebook that walks through every layer of the pipeline with live outputs:
+
+- Text / image / video ingestion with real ChromaDB storage
+- BM25 → dense → RRF fusion → cross-encoder reranking shown individually
+- Semantic cache miss → store → hit cycle
+- Prometheus metrics + OpenTelemetry span table
+- FastAPI endpoints called in-process via `httpx.ASGITransport`
+- Inline HTML preview of the Streamlit retrieval provenance UI
+
+Runs in **mock mode by default** (no model downloads, no Ollama needed). Set `USE_REAL_MODELS = True` to use the real CLIP and SentenceTransformer embeddings.
+
+```bash
+cd demo
+jupyter notebook pipeline_walkthrough.ipynb
+```
+
 ## Architecture
 
 ```
