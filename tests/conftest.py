@@ -12,9 +12,14 @@ from PIL import Image
 
 
 @pytest.fixture
-def ephemeral_client() -> chromadb.ClientAPI:
-    """An in-memory ChromaDB client — zero disk I/O, no cleanup needed."""
-    return chromadb.EphemeralClient()
+def ephemeral_client(tmp_path) -> chromadb.ClientAPI:
+    """A fully isolated ChromaDB client backed by a unique tmp_path per test.
+
+    Uses PersistentClient with a per-test temp directory so there is zero
+    shared state between tests. tmp_path is cleaned up automatically by pytest.
+    This avoids the EphemeralClient singleton issue in chromadb 0.6.x.
+    """
+    return chromadb.PersistentClient(path=str(tmp_path / "chroma"))
 
 
 @pytest.fixture
