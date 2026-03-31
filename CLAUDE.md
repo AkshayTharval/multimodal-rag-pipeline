@@ -12,13 +12,13 @@ relevant video keyframes, image stills, and associated text metadata.
 
 ## Phase Tracker
 - [x] Phase 1: Project bootstrap (structure, CLAUDE.md, requirements.txt, venv)
-- [ ] Phase 2: Ingestion pipeline (text, image, video)
-- [ ] Phase 3: Hybrid retrieval (BM25 + dense + RRF + cross-encoder)
-- [ ] Phase 4: Answer generation (Ollama, citations)
-- [ ] Phase 5: Semantic cache + observability
-- [ ] Phase 6: FastAPI service + batch CLI
-- [ ] Phase 7: Streamlit dashboard (retrieval provenance UI)
-- [ ] Phase 8: Integration tests
+- [x] Phase 2: Ingestion pipeline (text, image, video)
+- [x] Phase 3: Hybrid retrieval (BM25 + dense + RRF + cross-encoder)
+- [x] Phase 4: Answer generation (Ollama, citations)
+- [x] Phase 5: Semantic cache + observability
+- [x] Phase 6: FastAPI service + batch CLI
+- [x] Phase 7: Streamlit dashboard (retrieval provenance UI)
+- [x] Phase 8: Integration tests
 - [ ] Phase 9: Demo dataset + README + GitHub
 
 ---
